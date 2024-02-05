@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Hello World Azure Template</title>
-</head>
-<body>
-<h1>Azure Static Website Template</h1>
-<p>This page is a sample page for a “Hello World” Azure Static Website Template. The page contains an HTML validation warning. 
-Can you find and fix that warning? What about the curly quotes? Do they current work in all browsers? Can you fix the curly 
-quotes also? And what about proper indenting?</p>
-</body>
+    <style>
+        body{
+            text-align: center;
+            
+        margin-right:200px;
+        margin-left:200px;
+        color:black;
+        font: Times New Roman;
+        .large-font {
+            font-size: 20px; 
+        }
+        button {
+            margin-right: 10px; 
+        }
+        
+        } 
+       
+    
+    
+    </style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dice Rollar</title>
+        <link rel="stylesheet" href="styles.css"> 
+    </head>
+    <body>
+        <h1>Dice Rollar</h1> 
+        
+        
+        
+        <p class="large-font">This website is a dice rollar for the game Yahtzee, click the roll button, then watch as <br>
+                your numbers appear!</p>
+        <button class ="big button" onclick="handleClick()">Roll dice</button>
+        
+        
+        <script>
+            function handleClick() {
+                var randomNumbers = [];
+                for (var i = 0; i < 5; i++) { 
+                var randomNumber = Math.floor(Math.random() * 6) + 1; 
+                randomNumbers.push(randomNumber); 
+            }
+                alert("You rolled a: " + randomNumbers);
+                
+            }
+        </script>
+        <img src="dice.jpg" alt="Dice" style="width:600px;height:400px;"class="bottom-image">
 </html>
