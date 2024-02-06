@@ -26,8 +26,9 @@
         <title>Dice Rollar</title>
         <link rel="stylesheet" href="styles.css"> 
     </head>
-    <body>
+    <body onload="onLoadFunction()">
         <h1>Dice Rollar</h1> 
+        
         
         
         
@@ -46,6 +47,35 @@
                 alert("You rolled a: " + randomNumbers);
                 
             }
+           /* function handleKeyPress(event) {
+            // Check if the key pressed is Enter (key code 13)
+            if (event.keyCode === 13) {
+                // Trigger the desired action, for example, alerting a message
+                var randomNumbers = [];
+                for (var i = 0; i < 5; i++) { 
+                var randomNumber = Math.floor(Math.random() * 6) + 1; 
+                randomNumbers.push(randomNumber); 
+            }
+                alert("You rolled a: " + randomNumbers);
+            }
+        }*/
+        
+            
+
+            
+        function onLoadFunction() {
+            var randomNumbers = [];
+                for (var i = 0; i < 5; i++) { 
+                var randomNumber = Math.floor(Math.random() * 6) + 1; 
+                randomNumbers.push(randomNumber); 
+            }
+                alert("You rolled a: " + randomNumbers);
+            
+        }
+        
+        /*<input type="text" id="myInput" autofocus onkeypress="handleKeyPress(event)">
+        </input>*/
         </script>
         <img src="dice.jpg" alt="Dice" style="width:600px;height:400px;"class="bottom-image">
+        </body>
 </html>
